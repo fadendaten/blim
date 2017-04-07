@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: https://d1csr3q4rjsmej.cloudfront.net/1_17_nile/nile_F14937_01_stone.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - image/jpeg
+      Content-Length:
+      - '115282'
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 07 Apr 2017 09:45:40 GMT
+      Last-Modified:
+      - Thu, 08 Dec 2016 14:53:46 GMT
+      Etag:
+      - '"6c96384e9f8eed80f5b489c8dfb04363"'
+      Accept-Ranges:
+      - bytes
+      Server:
+      - AmazonS3
+      Age:
+      - '385'
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 709dc82c12bfdfc2826d5d578d7721fa.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - EV1A6hGpUySCz41YvLCSUqlbuueKP8biPs4wmq7duHX0GjCxS_a8Fw==
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 07 Apr 2017 09:52:04 GMT
+recorded_with: VCR 3.0.3
