@@ -1,4 +1,4 @@
-class Program
+Program.class_eval do
 
   def path_name
     short_name.downcase.strip
