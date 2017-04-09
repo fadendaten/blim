@@ -1,52 +1,56 @@
 require "spec_helper"
 
 RSpec.describe Blim::Colour do
-  let!(:collection) { Collection.new }
-  let!(:program) { Program.new }
-  let!(:style) { Style.new }
-  let!(:colour) { Colour.new }
+  let(:collection) { '1/17'}
+  let(:type) { Blim::TYPES.first }
 
-  let(:women) do
-    allow(collection).to receive(:season) { '1' }
-    allow(collection).to receive(:year) { '2017' }
-    allow(collection).to receive(:men?) { false }
-    collection
-  end
+  context "women" do
+    let(:colour) { 'Rose Water' }
+    let(:blue_colour) { 'Blue' }
+    let(:program) { 'Collection II Shirt' }
 
-  let(:collection_ii_shirt) do
-    allow(program).to receive(:name) { 'Collection II Shirt' }
-    allow(program).to receive(:collection) { women }
-    program
-  end
+    let(:blim_colour) { Blim::Colour.new(colour, program, collection) }
 
-  let(:rose_water) do
-    allow(colour).to receive(:name) { 'Rose Water' }
-    allow(colour).to receive(:parent) { collection_ii_shirt }
-    colour
-  end
+    describe "#image" do
+      it 'return the aws path to the image' do
+        expect(blim_colour.image_path).to eql('https://d2t93hgs2uwaga.cloudfront.net/1_17_nile/collection ii shirt/rose water.jpg')
+      end
+    end
 
-  let(:blue) do
-    allow(colour).to receive(:name) { 'Blue' }
-    allow(colour).to receive(:parent) { collection_ii_shirt }
-    colour
-  end
+    describe '#exists?', :vcr do
+      it 'should return true if image exists' do
+        expect(blim_colour.exists?).to eql(true)
+      end
 
-  let(:blim_colour) { Blim::Colour.new(rose_water) }
-
-  describe "#image" do
-    it 'return the aws path to the image' do
-      expect(blim_colour.image_path).to eql('https://d2t93hgs2uwaga.cloudfront.net/1_17_nile/collection ii shirt/rose water.jpg')
+      it 'should return false if image does not exists' do
+        blim_colour = Blim::Colour.new(blue_colour, program, collection)
+        expect(blim_colour.exists?).to eql(false)
+      end
     end
   end
 
-  describe '#exists?', :vcr do
-    it 'should return true if image exists' do
-      expect(blim_colour.exists?).to eql(true)
+  context "men" do
+    let(:colour) { 'Marsala' }
+    let(:blue_colour) { 'Blue' }
+    let(:program) { 'MEN SHIRT FLAME' }
+
+    let(:blim_colour) { Blim::Colour.new(colour, program, collection, true) }
+    describe "#image" do
+      it 'return the aws path to the image' do
+        expect(blim_colour.image_path).to eql('https://d2t93hgs2uwaga.cloudfront.net/1_17_nile_men/men shirt flame/marsala.jpg')
+      end
     end
 
-    it 'should return false if image does not exists' do
-      blim_colour = Blim::Colour.new(blue)
-      expect(blim_colour.exists?).to eql(false)
+    describe '#exists?', :vcr do
+      it 'should return true if image exists' do
+        expect(blim_colour.exists?).to eql(true)
+      end
+
+      it 'should return false if image does not exists' do
+        blim_colour = Blim::Colour.new(blue_colour, program, collection)
+        expect(blim_colour.exists?).to eql(false)
+      end
     end
+
   end
 end

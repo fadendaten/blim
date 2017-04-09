@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: head
-    uri: https://d1csr3q4rjsmej.cloudfront.net/1_17_nile/nile_F14937_01_stone.jpg
+    uri: https://d2t93hgs2uwaga.cloudfront.net/1_17_nile_men/men%20shirt%20flame/marsala.jpg
     body:
       encoding: US-ASCII
       string: ''
@@ -19,30 +19,30 @@ http_interactions:
       Content-Type:
       - image/jpeg
       Content-Length:
-      - '115282'
+      - '14228'
       Connection:
       - keep-alive
       Date:
-      - Fri, 07 Apr 2017 09:45:40 GMT
+      - Sun, 09 Apr 2017 19:16:16 GMT
       Last-Modified:
-      - Thu, 08 Dec 2016 14:53:46 GMT
+      - Tue, 31 Jan 2017 16:27:42 GMT
       Etag:
-      - '"6c96384e9f8eed80f5b489c8dfb04363"'
+      - '"832bb6a1259c8bf9b5fa41caab89a5bb"'
       Accept-Ranges:
       - bytes
       Server:
       - AmazonS3
       Age:
-      - '385'
+      - '305'
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 709dc82c12bfdfc2826d5d578d7721fa.cloudfront.net (CloudFront)
+      - 1.1 2f43d3215923fbce97b22ee733b0401f.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - EV1A6hGpUySCz41YvLCSUqlbuueKP8biPs4wmq7duHX0GjCxS_a8Fw==
+      - B3f19NvhO86FlbR7GOQGd3DLrkL3RvRwxwiQRnjzPYllG7xP9R_Vwg==
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 07 Apr 2017 09:52:04 GMT
+  recorded_at: Sun, 09 Apr 2017 19:21:19 GMT
 recorded_with: VCR 3.0.3

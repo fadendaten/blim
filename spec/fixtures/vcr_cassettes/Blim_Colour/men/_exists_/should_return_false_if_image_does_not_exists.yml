@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: head
-    uri: https://d2t93hgs2uwaga.cloudfront.net/1_17_nile/collection%20ii%20shirt/blue.jpg
+    uri: https://d2t93hgs2uwaga.cloudfront.net/1_17_nile/men%20shirt%20flame/blue.jpg
     body:
       encoding: US-ASCII
       string: ''
@@ -21,18 +21,18 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 07 Apr 2017 10:27:55 GMT
+      - Sun, 09 Apr 2017 19:21:20 GMT
       Server:
       - AmazonS3
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 55ee6ea70e0823309f10db2e4b8f119f.cloudfront.net (CloudFront)
+      - 1.1 c40ee2288a7db28fefd61c3f2ec7ccd7.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - fVF6dYmCguhmH8S6XysaFIRjNPn2ALfYjirCxbFH47YGXLFlW5F-lg==
+      - kOSfAQthAhLsmwPNpBoD6bPXjLySVNX_DEU_c0KyOztPQmyGC2PZoQ==
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 07 Apr 2017 10:27:56 GMT
+  recorded_at: Sun, 09 Apr 2017 19:21:19 GMT
 recorded_with: VCR 3.0.3

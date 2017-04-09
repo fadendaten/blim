@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: https://d2t93hgs2uwaga.cloudfront.net/1_17_nile/collection%20ii%20shirt/rose%20water.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - image/jpeg
+      Content-Length:
+      - '18586'
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 09 Apr 2017 19:13:24 GMT
+      Last-Modified:
+      - Tue, 31 Jan 2017 17:13:15 GMT
+      Etag:
+      - '"a3fc0983b89308c08b39967d3c3e1f3f"'
+      Accept-Ranges:
+      - bytes
+      Server:
+      - AmazonS3
+      Age:
+      - '477'
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 2f43d3215923fbce97b22ee733b0401f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - NqbnV1dULZsirA8LGtZBkWc76ufy6w_WCLXQPZnjla-HKeQ43GtwdA==
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 09 Apr 2017 19:21:19 GMT
+recorded_with: VCR 3.0.3

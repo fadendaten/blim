@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: https://d1csr3q4rjsmej.cloudfront.net/1_17_nile/nile_MF347_abcd_marsala.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 09 Apr 2017 19:19:21 GMT
+      Server:
+      - AmazonS3
+      Age:
+      - '119'
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 300b920cc4a53d2daec2ba8180596d82.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - YWCC7sOxsDT86RKqsWWBJbm73FPfsy4D4UJvnVZJhIpx0Rm8kmbq-w==
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 09 Apr 2017 19:21:20 GMT
+recorded_with: VCR 3.0.3

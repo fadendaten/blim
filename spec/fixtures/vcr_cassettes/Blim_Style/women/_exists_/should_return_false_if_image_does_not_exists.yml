@@ -18,21 +18,25 @@ http_interactions:
     headers:
       Content-Type:
       - application/xml
+      Content-Length:
+      - '0'
       Connection:
       - keep-alive
       Date:
-      - Fri, 07 Apr 2017 09:56:46 GMT
+      - Sun, 09 Apr 2017 19:19:21 GMT
       Server:
       - AmazonS3
+      Age:
+      - '120'
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 f2cc6dbe7150e50a6bc010a2d6868e5f.cloudfront.net (CloudFront)
+      - 1.1 a56a2e7149e67774870adaf614e87aa1.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 47AQ-TcGzduNAgwDuCfCCmhtw-ifZ_pCSSnn6eWlUmjTGgZhXYPZSg==
+      - ih64THGKdBM6daNibwfCVcYg83OZDuOdEQAYrFu7r2iLRv5EOIaCwA==
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 07 Apr 2017 09:56:47 GMT
+  recorded_at: Sun, 09 Apr 2017 19:21:20 GMT
 recorded_with: VCR 3.0.3

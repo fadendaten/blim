@@ -1,31 +1,35 @@
 module Blim
   class Style
 
-    attr_accessor :style, :color, :type
+    attr_accessor :style, :colour, :collection, :type, :men
 
-    def initialize(style, colour, type)
+    def initialize(style, colour, collection, type, men = false)
       if style.nil?
-        raise ArgumentError, "Style must be present"
+        raise ArgumentError, "Style number must be present"
       end
       if colour.nil?
-        raise ArgumentError, "Colour  must be present"
+        raise ArgumentError, "Colour name must be present"
+      end
+      if collection.nil?
+        raise ArgumentError, "Collection name  must be present"
       end
       if type.nil?
-        raise ArgumentError, "Colour  must be present"
+        raise ArgumentError, "Type must be present"
       end
 
       @style = style
       @colour = colour
+      @collection = collection
       @type = type
-      @collection = style.collection
+      @men = men
     end
 
-    def self.image_path(style, colour, type)
-      new(style, colour, type).image_path
+    def self.image_path(style, colour, collection, type, men)
+      new(style, colour, collection, type, men).image_path
     end
 
-    def self.exists?(style, colour, type)
-      new(style, colour, type).exists?
+    def self.exists?(style, colour, collection, type, men)
+      new(style, colour, collection, type, men).exists?
     end
 
     def image_path
@@ -46,17 +50,17 @@ module Blim
     private
 
     def url
-      location = "#{Blim.style_base_url}"
+      location = "#{Blim::STYLE_BASE_URL}"
       location << '/'
-      location << "#{@collection.path_name}"
+      location << "#{Blim.collection_path(@collection, @men)}"
       location << '/'
-      location << "#{@style.path_name}"
+      location << "#{Blim.style_path(@style)}"
       location << '_'
       location << "#{@type.identifier}"
       location << '_'
-      location << "#{@colour.path_name}"
+      location << "#{Blim.colour_path(@colour)}"
       location << '.'
-      location << "#{Blim.image_type}"
+      location << "#{Blim::IMAGE_TYPE}"
       location
     end
 
