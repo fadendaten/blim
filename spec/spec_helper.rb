@@ -1,7 +1,6 @@
 require 'bundler/setup'
 require 'blim'
 require 'vcr'
-require 'rails'
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
